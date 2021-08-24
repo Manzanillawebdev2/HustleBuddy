@@ -1,0 +1,390 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+      rel="stylesheet" href="//netdna.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css"
+    />
+
+    <title>Hustle Buddy</title>
+	
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Other CSS Files -->
+    <link rel="stylesheet" href="/static/css/fontawesome.css" />
+    <link rel="stylesheet" href="/static/css/templatemo-style.css" />
+    <link rel="stylesheet" href="/static/css/owl.css" />
+    <link rel="stylesheet" href="/static/css/lightbox.css" />
+    <link rel="stylesheet" href="/static/css/styles.css" />
+
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="/static/images/logo1.png" alt="Hustle Buddy" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Hustle Buddy</h4>
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="/bmi/{{uId.id}}/benefitpage/">Benefits of Workout</a></li>
+                <li><a href="/bmi/{{uId.id}}/fitpage/">Get Fit! Program</a></li>
+                <li><a href="/bmi/{{uId.id}}/viewdata/">BMI Calculator</a></li>
+                <li><a href="/bmi/{{uId.id}}/aboutpage">About</a></li> 
+              </ul>
+            </nav>
+            <div class="social-network">
+              <ul class="soial-icons">
+                <li>
+                  <a href="https://fb.com/templatemo"
+                    ><i class="fa fa-facebook"></i
+                  ></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-twitter"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-instagram"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-pinterest"></i></a>
+                </li>
+                <li>
+                  <a href="#"><i class="fa fa-youtube"></i></a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+
+	  <section class="section my-services" data-section="section2">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Get Fit! Program</h2>
+            <div class="line-dec"></div>
+          </div>
+          <div class="row">
+            <div class="col-md-6">
+				<div class="service-item">
+                <a href="exercise.html#section3"><h4>Peachy Challenge</h4></a>
+                <video width="350" controls>
+					<source src="/static/videos/butt-challenge.mp4" type="video/mp4">
+					Your browser does not support HTML video.
+				</video>
+              </div>
+            </div>
+            {% load static %}
+            <div class="stars">
+    <form method="POST" action="/bmi/{{uId.id}}/addrate">
+    <div class="text">Thanks for rating us!</div>
+    <input value="1-5" class="star star-5" id="star-5" type="radio" name="star"/>
+    <label class="star star-5" for="star-5"></label>
+
+    <input value="1-4" class="star star-4" id="star-4" type="radio" name="star"/>
+    <label class="star star-4" for="star-4"></label>
+
+    <input value="1-3" class="star star-3" id="star-3" type="radio" name="star"/>
+    <label class="star star-3" for="star-3"></label>
+
+    <input value="1-2" class="star star-2" id="star-2" type="radio" name="star"/>
+    <label class="star star-2" for="star-2"></label>
+
+    <input value="1-1" class="star star-1" id="star-1" type="radio" name="star"/>
+    <label class="star star-1" for="star-1"></label>
+          <header></header>
+          <div class="textarea">
+            <input type="text" cols="30" placeholder="Describe your experience.." name="mess"></input>
+            <br><br>
+            <input type="submit" name="btn" value="Send">
+          </div>
+          {% csrf_token %}
+        </form>
+</div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <a href="exercise.html#section3"><h4>Flat Belly Challenge</h4></a>
+                <video width="350" controls>
+					<source src="/static/videos/flat-stomach.mp4" type="video/mp4">
+					Your browser does not support HTML video.
+				</video>
+              </div>
+            </div>
+              <div class="stars">
+  <form method="POST" action="/bmi/{{uId.id}}/addrate">
+    <div class="text">Thanks for rating us!</div>
+    <input value="2-5" class="star star-5" id="star5-2" type="radio" name="star"/>
+    <label class="star star-5" for="star5-2"></label>
+
+    <input value="2-4" class="star star-4" id="star4-2" type="radio" name="star"/>
+    <label class="star star-4" for="star4-2"></label>
+
+    <input value="2-3" class="star star-3" id="star3-2" type="radio" name="star"/>
+    <label class="star star-3" for="star3-2"></label>
+
+    <input value="2-2" class="star star-2" id="star2-2" type="radio" name="star"/>
+    <label class="star star-2" for="star2-2"></label>
+
+    <input value="2-1" class="star star" id="star1-2" type="radio" name="star"/>
+    <label class="star star-1" for="star1-2"></label>
+          <header></header>
+          <div class="textarea">
+            <input cols="30" placeholder="Describe your experience.." name="mess"></input>
+          <br><br>
+            <input type="submit" name="btn" value="Send">
+          </div>
+          {% csrf_token %}
+        </form>
+</div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <a href="exercise.html#section3"><h4>Slim Thigh Challenge</h4></a>
+                <video width="350" controls>
+					<source src="/static/videos/slim-thigh-challenge.mp4" type="video/mp4">
+					Your browser does not support HTML video.
+				</video>
+              </div>
+            </div>
+              <div class="stars">
+  <form method="POST" action="/bmi/{{uId.id}}/addrate">
+    <div class="text">Thanks for rating us!</div>
+    <input value="3-5" class="star star-5" id="star5-3" type="radio" name="star"/>
+    <label class="star star-5" for="star5-3"></label>
+
+    <input value="3-4" class="star star-4" id="star4-3" type="radio" name="star"/>
+    <label class="star star-4" for="star4-3"></label>
+
+    <input value="3-3" class="star star-3" id="star3-3" type="radio" name="star"/>
+    <label class="star star-3" for="star3-3"></label>
+
+    <input value="3-2" class="star star-2" id="star2-3" type="radio" name="star"/>
+    <label class="star star-2" for="star2-3"></label>
+
+    <input value="3-1" class="star star-1" id="star1-3" type="radio" name="star"/>
+    <label class="star star-1" for="star1-3"></label>
+          <header></header>
+          <div class="textarea">
+            <input cols="30" placeholder="Describe your experience.." name="mess"></input>
+          <br><br>
+            <input type="submit" name="btn" value="Send">
+          </div>
+          {% csrf_token %}
+        </form>
+</div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <a href="exercise.html#section3"><h4>Full Body Shred Challenge</h4></a>
+                <video width="350" controls>
+					<source src="/static/videos/full-body-shredded.mp4" type="video/mp4">
+					Your browser does not support HTML video.
+				</video>
+              </div>
+              <div class="stars">
+  <form method="POST" action="/bmi/{{uId.id}}/addrate">
+    <div class="text">Thanks for rating us!</div>
+    <input value="4-5" class="star star-5" id="star5-4" type="radio" name="star"/>
+    <label class="star star-5" for="star5-4"></label>
+
+    <input value="4-4" class="star star-4" id="star4-4" type="radio" name="star"/>
+    <label class="star star-4" for="star4-4"></label>
+
+    <input value="4-3" class="star star-3" id="star3-4" type="radio" name="star"/>
+    <label class="star star-3" for="star3-4"></label>
+
+    <input value="4-2" class="star star-2" id="star2-4" type="radio" name="star"/>
+    <label class="star star-2" for="star2-4"></label>
+
+    <input value="4-1" class="star star-1" id="star1-4" type="radio" name="star"/>
+    <label class="star star-1" for="star1-4"></label>
+          <header></header>
+          <div class="textarea">
+            <input cols="30" placeholder="Describe your experience.." name="mess"></input>
+          <br><br>
+            <input type="submit" name="btn" value="Send">
+          </div>
+          {% csrf_token %}
+        </form>
+      </div>  
+
+            </div>
+          </div>
+        </div>
+      </section>
+	    
+	  <section class="section my-services" data-section="section2.1">
+        <div class="container">
+          <div class="section-heading">
+            <h2>Zumba Program</h2>
+            <div class="line-dec"></div>
+          </div>
+         
+            <div class="col-md-6">
+				<div class="service-item">
+                <video width="350" controls>
+					<source src="/static/videos/Haypa by MMJ Zumba Dance Fitness Live Love Party.mp4" type="video/mp4">
+					Your browser does not support HTML video.
+				</video>
+              </div>
+               <div class="row">
+            <div class="stars">
+  <form method="POST" action="/bmi/{{uId.id}}/addrate">
+    <div class="text">Thanks for rating us!</div>
+    <input value="5-5" class="star star-5" id="star5-5" type="radio" name="star"/>
+    <label class="star star-5" for="star5-5"></label>
+
+    <input value="5-4" class="star star-4" id="star4-5" type="radio" name="star"/>
+    <label class="star star-4" for="star4-5"></label>
+
+    <input value="5-3" class="star star-3" id="star3-5" type="radio" name="star"/>
+    <label class="star star-3" for="star3-5"></label>
+
+    <input value="5-2" class="star star-2" id="star2-5" type="radio" name="star"/>
+    <label class="star star-2" for="star2-5"></label>
+
+    <input value="5-1" class="star star-1" id="star1-5" type="radio" name="star"/>
+    <label class="star star-1" for="star1-5"></label>
+          <header></header>
+          <div class="textarea">
+            <input cols="30" placeholder="Describe your experience.." name="mess"></input>
+          <br><br>
+            <input type="submit" name="btn" value="Send">
+          </div>
+          {% csrf_token %}
+          </div>
+        </form>
+</div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <video width="350" controls>
+					<source src="/static/videos/Havana Live Love Party Zumba Dance Fitness.mp4" type="video/mp4">
+					Your browser does not support HTML video.
+				</video>
+              </div>
+               <div class="row">
+            <div class="stars">
+  <form method="POST" action="/bmi/{{uId.id}}/addrate">
+    <div class="text">Thanks for rating us!</div>
+    <input value="6-5" class="star star-5" id="star5-6" type="radio" name="star"/>
+    <label class="star star-5" for="star5-6"></label>
+
+    <input value="6-4" class="star star-4" id="star4-6" type="radio" name="star"/>
+    <label class="star star-4" for="star4-6"></label>
+
+    <input value="6-3" class="star star-3" id="star3-6" type="radio" name="star"/>
+    <label class="star star-3" for="star3-6"></label>
+
+    <input value="6-2" class="star star-2" id="star2-6" type="radio" name="star"/>
+    <label class="star star-2" for="star2-6"></label>
+
+    <input value="6-1" class="star star-1" id="star1-6" type="radio" name="star"/>
+    <label class="star star-1" for="star1-6"></label>
+          <header></header>
+          <div class="textarea">
+            <input cols="30" placeholder="Describe your experience.." name="mess"></input>
+           <br><br>
+            <input type="submit" name="btn" value="Send">
+          </div>
+          {% csrf_token %}
+          </div>
+        </form>
+</div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <video width="350" controls>
+					<source src="/static/videos/Fantastic Baby by BIGBANG Zumba Fitness Live Love Party KPOP.mp4" type="video/mp4">
+					Your browser does not support HTML video.
+				</video>
+              </div>
+               <div class="row">
+            <div class="stars">
+  <form method="POST" action="/bmi/{{uId.id}}/addrate">
+    <div class="text">Thanks for rating us!</div>
+    <input value="7-5" class="star star-5" id="star5-7" type="radio" name="star"/>
+    <label class="star star-5" for="star5-7"></label>
+
+    <input value="7-4" class="star star-4" id="star4-7" type="radio" name="star"/>
+    <label class="star star-4" for="star4-7"></label>
+
+    <input value="7-3" class="star star-3" id="star3-7" type="radio" name="star"/>
+    <label class="star star-3" for="star3-7"></label>
+
+    <input value="7-2" class="star star-2" id="star2-7" type="radio" name="star"/>
+    <label class="star star-2" for="star2-7"></label>
+
+    <input value="7-1" class="star star-1" id="star1-7" type="radio" name="star"/>
+    <label class="star star-1" for="star1-7"></label>
+          <header></header>
+          <div class="textarea">
+            <input cols="30" placeholder="Describe your experience.." name="mess"></input>
+          <br><br>
+            <input type="submit" name="btn" value="Send">
+          </div>
+          {% csrf_token %}
+          </div>
+        </form>
+</div>
+            </div>
+            <div class="col-md-6">
+              <div class="service-item">
+                <video width="350" controls>
+					<source src="/static/videos/Clap Snap (RecoveryTrack) Zumba Live Love Party.mp4" type="video/mp4">
+					Your browser does not support HTML video.
+				</video>
+              </div>
+               <div class="row">
+            <div class="stars">
+  <form method="POST" action="/bmi/{{uId.id}}/addrate">
+    <div class="text">Thanks for rating us!</div>
+    <input value="8-5" class="star star-5" id="star5-8" type="radio" name="star"/>
+    <label class="star star-5" for="star5-8"></label>
+
+    <input value="8-4" class="star star-4" id="star4-8" type="radio" name="star"/>
+    <label class="star star-4" for="star4-8"></label>
+
+    <input value="8-3" class="star star-3" id="star3-8" type="radio" name="star"/>
+    <label class="star star-3" for="star3-8"></label>
+
+    <input value="8-2" class="star star-2" id="star2-8" type="radio" name="star"/>
+    <label class="star star-2" for="star2-8"></label>
+
+    <input value="8-1" class="star star-1" id="star1-8" type="radio" name="star"/>
+    <label class="star star-1" for="star1-8"></label>
+          <header></header>
+          <div class="textarea">
+            <input cols="30" placeholder="Describe your experience.." name="mess"></input>
+          <br><br>
+            <input type="submit" name="btn" value="Send">
+          </div>
+          {% csrf_token %}
+          </div>
+        </form>
+</div>
+            </div>
+          </div>
+        </div>
+      </section>
+	  
+	</div>
+  </body>
+</html>

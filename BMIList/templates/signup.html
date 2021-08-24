@@ -1,0 +1,131 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+* {box-sizing: border-box}
+
+/* Full-width input fields */
+  input[type=text], input[type=password] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0 15px 0;
+  display: inline-block;
+  border: none;
+  background: #f1f1f1;
+}
+
+input[type=text]:focus, input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+hr {
+  border: 1px solid #f1f1f1;
+  margin-bottom: 25px;
+}
+
+/* Set a style for all buttons */
+button {
+  background-color: #04AA6D;
+  color: white;
+  padding: 14px 20px;
+  margin: 8px 0;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  opacity: 0.9;
+}
+
+button:hover {
+  opacity:1;
+}
+
+/* Extra styles for the cancel button */
+.cancelbtn {
+  padding: 10px 20px;
+  background-color: darkgray;
+}
+.button {
+  padding: 14px 20px;
+  background-color: #darkgray;
+}
+
+/* Float cancel and signup buttons and add an equal width */
+.cancelbtn, .signupbtn {
+  float: left;
+  width: 50%;
+}
+
+/* Add padding to container elements */
+.container {
+  padding: 12px;
+}
+
+/* Clear floats */
+.clearfix::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+/*Main division for the sign up form */
+.main {
+  border: 10px;
+  border-color: #000000;
+}
+
+/* Change styles for cancel button and signup button on extra small screens */
+@media screen and (max-width: 300px) {
+  .cancelbtn, .signupbtn {
+    width: 100%;
+  }
+}
+</style>
+</head>
+<body>
+
+
+<div class="main">
+<form method="POST" style="border:1px solid #ccc" action="/bmi/new">
+  <div class="container">
+    <center><h1>Sign Up</h1></center>
+    <hr>
+
+    <label for="meyll"><b>Username</b></label>
+    <input id="meyll" type="text" placeholder="Enter Username" name="meyll" required>
+
+    <label for="psw"><b>Password</b></label>
+    <input id="psww" type="password" placeholder="Enter Password" name="psww" required>
+
+    <label for="fname"><b>First Name</b></label>
+    <input id="fnamee" type="text" placeholder="First Name" name="fnamee" required>
+
+    <label for="lname"><b>Last Name</b></label>
+    <input id="lnamee" type="text" placeholder="Last Name" name="lnamee" required>
+
+    <label for="age"><b>Age</b></label>
+    <input id="agge" type="number" placeholder="Age" name="agge" min="18" required>
+    <br>
+    <br>
+    <label for="sex"><b>Sex</b></label>
+    <br>
+    <input id="ssex" type="radio" name="ssex" value="male"> Male
+    <br>
+    <input id="ssex" type="radio" name="ssex" value="female"> Female
+
+    <p>By creating an account you agree to our <a href="#" style="color:dodgerblue">Terms & Privacy</a>.</p>
+
+    <div class="clearfix">
+      <button style="width: 120px" type="button" id="button" class="button"><a href="{% url 'login' %}">Cancel</button>
+      <input type="submit" name="submit" id="submit" value="Confirm" class="button">
+    </div>
+    {% csrf_token %}
+  </div>
+</form>
+</div>
+
+
+</body>
+</html>
+

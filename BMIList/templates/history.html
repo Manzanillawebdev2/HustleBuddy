@@ -1,0 +1,82 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Hustle Buddy</title>
+  
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Other CSS Files -->
+    <link rel="stylesheet" href="/static/css/fontawesome.css" />
+    <link rel="stylesheet" href="/static/css/templatemo-style.css" />
+    <link rel="stylesheet" href="/static/css/owl.css" />
+    <link rel="stylesheet" href="/static/css/lightbox.css" />
+
+
+    <!-- JS for line graph-->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              <a href="#"><img src="/static/images/logo1.png" alt="Hustle Buddy" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Hustle Buddy</h4>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <section class="section my-work" data-section="section3">
+        <div class="container">
+          <div class="section-heading">
+            <h2>BMI History Data Table</h2>
+            <div class="line-dec"></div>
+              <div class="container-fluid">
+                <table class="table table-bordered" id="dataTable" cellspacing="0">
+                  <thead>
+                   <tr>
+                    <th>Date</th>
+                    <th>Height (cm)</th>
+                    <th>Weight (kg)</th>
+                    <th>BMI Total</th>
+                    <th>BMI Result</th>
+                   </tr>
+                   {% for inputdata in InputData %}
+                        <tr>
+                            <td>{{forloop.counter}}. {{inputdata.Date}}</td>
+                            <td>{{inputdata.Height}}</td>
+                            <td>{{inputdata.Weight}}</td>
+                            <td>{{inputdata.BMITotal}}</td>
+                            <td>{{inputdata.BMIResult}}</td>
+                        </tr>
+                    {% endfor%}
+                  </thead>
+                </table>
+          </div>
+        </div>
+      </section>
+    </div>
+  </body>
+</html>

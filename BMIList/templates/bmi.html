@@ -1,0 +1,155 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1, shrink-to-fit=no"
+    />
+    <meta name="description" content="" />
+    <meta name="author" content="" />
+    <link
+      href="https://fonts.googleapis.com/css?family=Lato:100,300,400,700,900"
+      rel="stylesheet"
+    />
+
+    <title>Hustle Buddy</title>
+  
+    <!-- Bootstrap core CSS -->
+    <link href="/static/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet" />
+
+    <!-- Other CSS Files -->
+    <link rel="stylesheet" href="/static/css/fontawesome.css" />
+    <link rel="stylesheet" href="/static/css/templatemo-style.css" />
+    <link rel="stylesheet" href="/static/css/owl.css" />
+    <link rel="stylesheet" href="/static/css/lightbox.css" />
+
+    <!-- Script for BMI Calculator-->
+    <script src="static/js/bmi-calculator.js"></script>
+
+  </head>
+
+  <body>
+    <div id="page-wraper">
+      <!-- Sidebar Menu -->
+      <div class="responsive-nav">
+        <i class="fa fa-bars" id="menu-toggle"></i>
+        <div id="menu" class="menu">
+          <i class="fa fa-times" id="menu-close"></i>
+          <div class="container">
+            <div class="image">
+              {% load static %}
+              <a href="#"><img src='/static/images/logo1.png'alt="Hustle Buddy" /></a>
+            </div>
+            <div class="author-content">
+              <h4>Hustle Buddy</h4>
+            </div>
+            <nav class="main-nav" role="navigation">
+              <ul class="main-menu">
+                <li><a href="/bmi/{{uId.id}}/benefitpage/">Benefits of Workout</a></li>
+                <li><a href="/bmi/{{uId.id}}/fitpage/">Get Fit! Program</a></li>
+                <li><a href="/bmi/{{uId.id}}/viewdata/">BMI Calculator</a></li>
+                <li><a href="/bmi/{{uId.id}}/aboutpage">About</a></li>                
+              </ul>
+            </nav>
+          </div>
+        </div>
+      </div>
+
+      <section class="section my-work" data-section="section3.1">
+        <div class="container">
+          <div class="section-heading">
+            <p class="sub"> User Info</p>
+            <table>
+                <tr>
+                 <td>Your Link:</td>
+                    <td>First Name:</td>
+                    <td>Last Name:</td>
+                    <td>Sex:</td>
+                </tr>
+                <tr>
+                    
+                    <td>bmi.ph/bmi/{{uId.id}}</td>
+                    <td>{{uId.fname.upper}}</td>
+                    <td>{{uId.lname.upper}}</td>
+                    <td>{{uId.sex.upper}}</td>
+                    <td style="width: 20px;"><a href="updatedon/{{signup.id}}" style="color: yellow;">Update</a></td>
+            
+                </tr>
+
+            </table>
+               {% load static %}
+              <div class="author-content" style="color: white;">
+              <div align="center"> 
+              <br>
+              <h2>Input Data</h2>
+              <div class="line-dec"></div>
+              <div class="content">
+                <table align="center">
+                <form name="bmiForm" method="POST" action="/bmi/{{uId.id}}/addData">
+                      {% csrf_token %}
+                      <div class="content">
+                      <br>
+                      <p>Date</p>
+                      <input align="center" name="date" type="date" id="date">
+                      <br>
+                      <br>
+                      Your Weight(kg): <input align="center" type="text" name="weight" size="10"><br />
+                      <br>
+                      Your Height(cm): <input align="center" type="text" name="height" size="10"><br />
+                      <br>
+                      <input align="center" type="button" value="Calculate BMI" onClick="calculateBmi()"><br />
+                      <br>
+                      BMI Total: <input align="center" type="text" name="total" size="10"><br />
+                      <br>
+                      BMI Result: <input align="center" type="text" name="result" size="20"><br />
+                      <br>
+                      <input align="center" type="submit" name="submit" id="submit" value="Save" class="button">
+                      <br/>
+                      <br>
+                      <input type="reset" value="Reset" />
+                      </form>
+                      <br/>
+                      {% csrf_token %}
+                      </form>
+                      </table>
+              </div>
+            </span>
+          </div>
+        </div>
+
+            <div class="col-md-6">
+              <div class="service-item">
+                <a href="/bmi/{{uId.id}}/historypage"><h4>BMI History</h4></a>
+              </div>
+            </div>
+      </div>
+      </section>
+    </div>
+    <script language="JavaScript">
+<!--
+function calculateBmi() {
+var weight = document.bmiForm.weight.value
+var height = document.bmiForm.height.value
+if(weight > 0 && height > 0){ 
+var total = weight/(height/100*height/100)
+document.bmiForm.total.value = total
+if(total < 18.5){
+document.bmiForm.result.value = "That you are too thin."
+}
+if(total > 18.5 && total < 25){
+document.bmiForm.result.value = "That you are healthy."
+}
+if(total > 25){
+document.bmiForm.result.value = "That you have overweight."
+}
+}
+else{
+alert("Please Fill in everything correctly")
+}
+}
+//-->
+</script>
+  </body>
+</html>
